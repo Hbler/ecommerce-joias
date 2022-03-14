@@ -104,7 +104,8 @@
 
 
 > Listas:
-productInfo - Uma matriz contendo listas com nome, preço, descrição, tags, e imagem (src), de cada produto
+productInfo 
+Uma matriz contendo listas com nome, preço, descrição, tags, e imagem (src), de cada produto
 
 > Classes:
 Product - Cada instancia é um objeto com os atributos:
