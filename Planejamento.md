@@ -104,24 +104,25 @@
 
 
 > Listas:
-productInfo 
+- productInfo 
 Uma matriz contendo listas com nome, preço, descrição, tags, e imagem (src), de cada produto
 
 > Classes:
-Product - Cada instancia é um objeto com os atributos:
-- ID - Código definido na instanciação
-- Nome - fornecido na instanciação
-- Preço - fornecido na instanciação
-- Descrição - fornecido na instanciação
-- TagsList - fornecido na instanciação
-- Fonte da imagem - fornecida na instanciação
+- Product - Cada instancia é um objeto com os atributos:
+  - ID - Código definido na instanciação
+  - Nome - fornecido na instanciação
+  - Preço - fornecido na instanciação
+  - Descrição - fornecido na instanciação
+  - TagsList - fornecido na instanciação
+  - Fonte da imagem - fornecida na instanciação
 
 > Objetos:
-Products - Todos os objetos product
-Cart - Produtos no carrinho
-WishList - Producto na lista de desejos
+- Products - Todos os objetos product
+- Cart - Produtos no carrinho
+- WishList - Producto na lista de desejos
 
 > Funções:
+-
 ``` function displayProducts(“all”) ```
 ``` function updateCart() ```
 ``` function updateWishList() ```
@@ -145,15 +146,15 @@ WishList - Producto na lista de desejos
 
 ### Paleta de Cores
 > Background
-    #FFF
+- #FFF
 > Header
-    #F8f8f8
+- #F8f8f8
 > Botão Pesquisar + Header Carrinho
-    #523F02
+- #523F02
 > Header Lista de Desejos
-    #ffd0d0
+- #ffd0d0
 > Background Listas + Barra pesquisa + Filtro Tags + Texto Descrição
-    #c8c8c8
+- #c8c8c8
 > Cores Tags
 - Tipo Produto
   - #a8a8a8
@@ -164,7 +165,7 @@ WishList - Producto na lista de desejos
 - Pedraria
   - #c8e8e8
 > Preço + Botão Adiconar ao Carrinho
-    #000
+- #000
 > Hover ->  boão pesquisar e Adicionar ao carrinho invertem as cores
- #000 -> #523F02
- #523F02 -> #000
+- #000 -> #523F02
+- #523F02 -> #000
