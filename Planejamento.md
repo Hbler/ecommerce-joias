@@ -122,14 +122,13 @@ Uma matriz contendo listas com nome, preço, descrição, tags, e imagem (src), 
 - WishList - Producto na lista de desejos
 
 > Funções:
--
-``` function displayProducts(“all”) ```
-``` function updateCart() ```
-``` function updateWishList() ```
-``` function addToCart() ``` -> também chama ``` function updateCart() ```
-``` function addToWhishList() ``` -> também chama ``` function updateWishList() ```
-``` function filterProducts(“tag”) ``` -> chama ``` function displayProducts(“tag escolhida”) ```
-``` function updateProducts(“tag”) ``` -> usa a matriz productInfo e a classe Product, para preencher o objeto Products
+- ``` function displayProducts(“all”) ```
+- ``` function updateCart() ```
+- ``` function updateWishList() ```
+- ``` function addToCart() ``` -> também chama ``` function updateCart() ```
+- ``` function addToWhishList() ``` -> também chama ``` function updateWishList() ```
+- ``` function filterProducts(“tag”) ``` -> chama ``` function displayProducts(“tag escolhida”) ```
+- ``` function updateProducts(“tag”) ``` -> usa a matriz productInfo e a classe Product, para preencher o objeto Products
 
 ### Estrutura de Arquivos
 > Root
@@ -137,12 +136,12 @@ Uma matriz contendo listas com nome, preço, descrição, tags, e imagem (src), 
 - README.md
 - Planejamento.md
 - Planejamento.txt
-    > Style
-        - style.css
-    > Script
-        - main.js -> importa tudo e organiza a execução das funcões
-        - support.js -> exporta objetos e classe
-        - functions.js -> exporta funções
+> Style
+- style.css
+> Script
+- main.js -> importa tudo e organiza a execução das funcões
+- support.js -> exporta objetos e classe
+- functions.js -> exporta funções
 
 ### Paleta de Cores
 > Background
