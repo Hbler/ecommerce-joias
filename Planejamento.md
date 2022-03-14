@@ -136,6 +136,9 @@ Uma matriz contendo listas com nome, preço, descrição, tags, e imagem (src), 
 - README.md
 - Planejamento.md
 - Planejamento.txt
+- Assets
+  - Style
+  - Script   
 > Style
 - style.css
 > Script
