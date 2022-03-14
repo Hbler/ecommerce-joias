@@ -16,14 +16,14 @@
         - Pulseira
         - Colar
         - Anel
-      - “Banho” do produto (banhado à):
-        - Ouro
-        - Prata
-        - Bronze
+      - Metal:
+        - Ouro Amarelo
+        - Ouro Branco
+        - Ouro Rosa
       - Pedraria
         - Sem Pedras
-        - Pedraria Sutil
-        - Pedraria Nobre
+        - Semi-Cravejado
+        - Cravejado
 - Mouse sobre o porduto
 - CLicar no produto
 - Adicionar ao carrinho
@@ -106,6 +106,10 @@
 > Listas:
 - productInfo 
 Uma matriz contendo listas com nome, preço, descrição, tags, e imagem (src), de cada produto
+- Cart
+Produtos no carrinho
+- WishList
+Produtos na lista de desejos
 
 > Classes:
 - Product - Cada instancia é um objeto com os atributos:
@@ -118,8 +122,6 @@ Uma matriz contendo listas com nome, preço, descrição, tags, e imagem (src), 
 
 > Objetos:
 - Products - Todos os objetos product
-- Cart - Produtos no carrinho
-- WishList - Producto na lista de desejos
 
 > Funções:
 - ``` function displayProducts(“all”) ```
@@ -138,7 +140,8 @@ Uma matriz contendo listas com nome, preço, descrição, tags, e imagem (src), 
 - Planejamento.txt
 - Assets
   - Style
-  - Script   
+  - Script
+  - Img
 > Style
 - style.css
 > Script
@@ -161,9 +164,9 @@ Uma matriz contendo listas com nome, preço, descrição, tags, e imagem (src), 
 - Tipo Produto
   - #a8a8a8
 - Banho Produto
-  - #9e5c43 - Bronze
-  - #9e9e9e - Prata
-  - #9e7a03 - Ouro
+  - #9e5c43 - Ouro Rosa
+  - #9e9e9e - Ouro Branco
+  - #9e7a03 - Ouro Amarelo
 - Pedraria
   - #c8e8e8
 > Preço + Botão Adiconar ao Carrinho
