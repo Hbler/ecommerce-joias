@@ -60,13 +60,13 @@
       - Div (Resumo Pedido)
         - Quantidade de itens
         - Valor Total
-        - Esvaziar Carrinho
+        - Comprar
     - Section (Lista de Desejos)
       - Div (Card Produto)
         - Image
         - Nome
         - Remover da lista
-      - Esvaziar lista
+      - Adicionar ao carrinho
 
 ### JavaScript
 > Algoritimo:
@@ -154,21 +154,22 @@ Produtos na lista de desejos
 - #FFF
 > Header
 - #F8f8f8
-> Botão Pesquisar + Header Carrinho
+> Botão Pesquisar
 - #523F02
+> Header Carrinho
+- #523F0250
+> Background Carrinho
+- #523F0220
 > Header Lista de Desejos
-- #ffd0d0
-> Background Listas + Barra pesquisa + Filtro Tags + Texto Descrição
+- #00000050
+> Header Lista de Desejos
+- #00000020
+> Background Filtro Tags
 - #c8c8c8
-> Cores Tags
-- Tipo Produto
-  - #a8a8a8
-- Banho Produto
-  - #9e5c43 - Ouro Rosa
-  - #9e9e9e - Ouro Branco
-  - #9e7a03 - Ouro Amarelo
-- Pedraria
-  - #c8e8e8
+> Background Tags
+- #dbdbdb
+> Texto Tags + Descrição
+- #686868
 > Preço + Botão Adiconar ao Carrinho
 - #000
 > Hover ->  boão pesquisar e Adicionar ao carrinho invertem as cores
