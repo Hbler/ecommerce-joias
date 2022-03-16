@@ -441,6 +441,13 @@ aside h2 {
   background-color: #523f02;
 }
 
+/* Control Classes */
+
+.active {
+  color: #000;
+  font-weight: 400;
+}
+
 .clear {
   display: none;
 }

@@ -5,7 +5,7 @@ const productInfo = [
     "Serpenti Viper Colar",
     51000,
     "colar",
-    "Interpretação ultramoderna do famoso ícone de glamour e sedução da Bvlgari, Serpenti Viper encanta com seu design inovador e de ponta. Evocando a cobra mítica por meio de formas geométricas e elegantes, este pingente se envolve ao redor da corrente, encantando com a beleza preciosa das escamas e com a sinuosidade inconfundível da coleção Serpenti. Colar Serpenti Viper em ouro branco 18K e pavê de diamantes.",
+    "Interpretação ultramoderna do famoso ícone de glamour e sedução da Bwlgari, Serpenti Viper encanta com seu design inovador e de ponta. Evocando a cobra mítica por meio de formas geométricas e elegantes, este pingente se envolve ao redor da corrente, encantando com a beleza preciosa das escamas e com a sinuosidade inconfundível da coleção Serpenti. Colar Serpenti Viper em ouro branco 18K e pavê de diamantes.",
     ["ouro branco", "cravejado"],
     ["./Assets/Img/SVC-OB-C-01.png", "./Assets/Img/SVC-OB-C-02.png"],
   ],
@@ -13,7 +13,7 @@ const productInfo = [
     "Serpenti Viper Colar",
     47900,
     "colar",
-    "Interpretação ultramoderna do famoso ícone de glamour e sedução da Bvlgari, Serpenti Viper encanta com seu design inovador e de ponta. Evocando a cobra mítica por meio de formas geométricas e elegantes, este pingente se envolve ao redor da corrente, encantando com a beleza preciosa das escamas e com a sinuosidade inconfundível da coleção Serpenti. Colar Serpenti Viper em ouro rosa 18K e pavê de diamantes.",
+    "Interpretação ultramoderna do famoso ícone de glamour e sedução da Bwlgari, Serpenti Viper encanta com seu design inovador e de ponta. Evocando a cobra mítica por meio de formas geométricas e elegantes, este pingente se envolve ao redor da corrente, encantando com a beleza preciosa das escamas e com a sinuosidade inconfundível da coleção Serpenti. Colar Serpenti Viper em ouro rosa 18K e pavê de diamantes.",
     ["ouro rosa", "cravejado"],
     ["./Assets/Img/SVC-OR-C-01.png", "./Assets/Img/SVC-OR-C-02.png"],
   ],
@@ -21,7 +21,7 @@ const productInfo = [
     "Serpenti Viper Colar",
     30200,
     "colar",
-    "Interpretação ultramoderna do famoso ícone de glamour e sedução da Bvlgari, Serpenti Viper encanta com seu design inovador e de ponta. Evocando a cobra mítica por meio de formas geométricas e elegantes, este pingente se envolve ao redor da corrente, encantando com a beleza preciosa das escamas e com a sinuosidade inconfundível da coleção Serpenti. Colar Serpenti Viper em ouro rosa 18K semicravejado com pavê de diamantes.",
+    "Interpretação ultramoderna do famoso ícone de glamour e sedução da Bwlgari, Serpenti Viper encanta com seu design inovador e de ponta. Evocando a cobra mítica por meio de formas geométricas e elegantes, este pingente se envolve ao redor da corrente, encantando com a beleza preciosa das escamas e com a sinuosidade inconfundível da coleção Serpenti. Colar Serpenti Viper em ouro rosa 18K semicravejado com pavê de diamantes.",
     ["ouro rosa", "semi-cravejado"],
     ["./Assets/Img/SVC-OR-SC-01.png", "./Assets/Img/SVC-OR-SC-02.png"],
   ],
@@ -29,7 +29,7 @@ const productInfo = [
     "Serpenti Viper Colar",
     141000,
     "colar",
-    "Interpretação ultramoderna do famoso ícone de glamour e sedução da Bvlgari, Serpenti Viper encanta com seu design inovador e de ponta. Evocando a cobra mítica por meio de formas geométricas e elegantes, este colar se envolve ao redor do pescoço, encantando com a beleza preciosa das escamas e com a sinuosidade inconfundível da coleção Serpenti. Colar Serpenti Viper em ouro rosa 18K semicravejado com pavê de diamantes.",
+    "Interpretação ultramoderna do famoso ícone de glamour e sedução da Bwlgari, Serpenti Viper encanta com seu design inovador e de ponta. Evocando a cobra mítica por meio de formas geométricas e elegantes, este colar se envolve ao redor do pescoço, encantando com a beleza preciosa das escamas e com a sinuosidade inconfundível da coleção Serpenti. Colar Serpenti Viper em ouro rosa 18K semicravejado com pavê de diamantes.",
     ["ouro rosa", "semi-cravejado"],
     ["./Assets/Img/SVC-OR-SC-03.png", "./Assets/Img/SVC-OR-SC-04.png"],
   ],
@@ -37,7 +37,7 @@ const productInfo = [
     "Serpenti Viper Colar",
     296000,
     "colar",
-    "Em um tributo a seu espírito animal, a Bvlgari captura o poder de sedução neste colar Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamourosa, esta joia se envolve no pescoço, encantando com a beleza preciosa de escamas e com a sinuosidade inconfundível da serpente.",
+    "Em um tributo a seu espírito animal, a Bwlgari captura o poder de sedução neste colar Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamourosa, esta joia se envolve no pescoço, encantando com a beleza preciosa de escamas e com a sinuosidade inconfundível da serpente.",
     ["ouro rosa", "cravejado"],
     ["./Assets/Img/SVC-OR-C-03.png", "./Assets/Img/SVC-OR-C-04.png"],
   ],
@@ -53,7 +53,7 @@ const productInfo = [
     "Serpenti Viper Pulseira",
     186000,
     "pulseira",
-    "Em um tributo a seu espírito animal, a Bvlgari captura o poder de sedução nesta pulseira Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamourosa, esta joia se envolve no pulso, encantando com a beleza preciosa de escamas e com a sinuosidade inconfundível da serpente.",
+    "Em um tributo a seu espírito animal, a Bwlgari captura o poder de sedução nesta pulseira Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamourosa, esta joia se envolve no pulso, encantando com a beleza preciosa de escamas e com a sinuosidade inconfundível da serpente.",
     ["ouro rosa", "cravejado"],
     ["./Assets/Img/SVP-OR-C-01.png", "./Assets/Img/SVP-OR-C-02.png"],
   ],
@@ -61,7 +61,7 @@ const productInfo = [
     "Serpenti Viper Pulseira",
     60000,
     "pulseira",
-    "Interpretação ultramoderna do famoso ícone de glamour e sedução da Bvlgari, Serpenti Viper encanta com seu design inovador e de ponta. Evocando a cobra mítica por meio de formas geométricas e elegantes, esta pulseira se envolve ao redor do pulso, encantando com a beleza preciosa das escamas e com a sinuosidade inconfundível da coleção Serpenti. Pulseira Serpenti Viper em ouro rosa 18K semicravejada com pavê de diamantes.",
+    "Interpretação ultramoderna do famoso ícone de glamour e sedução da Bwlgari, Serpenti Viper encanta com seu design inovador e de ponta. Evocando a cobra mítica por meio de formas geométricas e elegantes, esta pulseira se envolve ao redor do pulso, encantando com a beleza preciosa das escamas e com a sinuosidade inconfundível da coleção Serpenti. Pulseira Serpenti Viper em ouro rosa 18K semicravejada com pavê de diamantes.",
     ["ouro rosa", "semi-cravejado"],
     ["./Assets/Img/SVP-OR-SC-01.png", "./Assets/Img/SVP-OR-SC-02.png"],
   ],
@@ -77,7 +77,7 @@ const productInfo = [
     "Serpenti Viper Pulseira",
     186000,
     "pulseira",
-    "Em um tributo a seu espírito animal, a Bvlgari captura o poder de sedução nesta pulseira Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamourosa, esta joia se envolve no pulso destacando-se pela preciosa beleza das escamas e a inconfundível sinuosidade da serpente. Pulseira Serpenti em ouro amarelo 18K com pavê de diamantes.",
+    "Em um tributo a seu espírito animal, a Bwlgari captura o poder de sedução nesta pulseira Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamourosa, esta joia se envolve no pulso destacando-se pela preciosa beleza das escamas e a inconfundível sinuosidade da serpente. Pulseira Serpenti em ouro amarelo 18K com pavê de diamantes.",
     ["ouro amarelo", "cravejado"],
     ["./Assets/Img/SVP-OA-C-01.png", "./Assets/Img/SVP-OA-C-02.png"],
   ],
@@ -85,7 +85,7 @@ const productInfo = [
     "Serpenti Viper Anel",
     51000,
     "anel",
-    "Em um tributo a seu espírito animal, a Bvlgari captura o poder de sedução no anel Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamourosa, a joia se envolve no dedo destacando-se pela preciosa beleza das escamas e a inconfundível sinuosidade da serpente. Anel Serpenti em ouro amarelo 18K com pavê de diamantes.",
+    "Em um tributo a seu espírito animal, a Bwlgari captura o poder de sedução no anel Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamourosa, a joia se envolve no dedo destacando-se pela preciosa beleza das escamas e a inconfundível sinuosidade da serpente. Anel Serpenti em ouro amarelo 18K com pavê de diamantes.",
     ["ouro amarelo", "cravejado"],
     ["./Assets/Img/SVA-OA-C-01.png", "./Assets/Img/SVA-OA-C-02.png"],
   ],
@@ -93,7 +93,7 @@ const productInfo = [
     "Serpenti Viper Anel",
     51000,
     "anel",
-    "Em um tributo a seu espírito animal, a Bvlgari captura o poder de sedução no anel Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamourosa, a joia se envolve no dedo, encantando com a beleza preciosa das escamas e com a sinuosidade inconfundível da serpente. Anel Serpenti em ouro rosa 18K com pavê de diamantes.",
+    "Em um tributo a seu espírito animal, a Bwlgari captura o poder de sedução no anel Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamourosa, a joia se envolve no dedo, encantando com a beleza preciosa das escamas e com a sinuosidade inconfundível da serpente. Anel Serpenti em ouro rosa 18K com pavê de diamantes.",
     ["ouro rosa", "cravejado"],
     ["./Assets/Img/SVA-OR-C-01.png", "./Assets/Img/SVA-OR-C-02.png"],
   ],
@@ -101,7 +101,7 @@ const productInfo = [
     "Serpenti Viper Anel",
     53000,
     "anel",
-    "Em um tributo a seu espírito animal, a Bvlgari captura o poder de sedução no anel Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamourosa, a joia se envolve no dedo, encantando com a beleza preciosa das escamas e com a sinuosidade inconfundível da serpente. Anel Serpenti em ouro branco 18K cravejado com pavê de diamantes.",
+    "Em um tributo a seu espírito animal, a Bwlgari captura o poder de sedução no anel Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamourosa, a joia se envolve no dedo, encantando com a beleza preciosa das escamas e com a sinuosidade inconfundível da serpente. Anel Serpenti em ouro branco 18K cravejado com pavê de diamantes.",
     ["ouro branco", "cravejado"],
     ["./Assets/Img/SVA-OB-C-01.png", "./Assets/Img/SVA-OB-C-02.png"],
   ],
@@ -109,7 +109,7 @@ const productInfo = [
     "Serpenti Viper Anel",
     20200,
     "anel",
-    "Em um tributo a seu espírito animal, a Bvlgari captura o poder de sedução neste anel Serpenti Viper, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamourosa, esta joia se envolve no dedo, encantando com a beleza preciosa de escamas e com a sinuosidade inconfundível da serpente.",
+    "Em um tributo a seu espírito animal, a Bwlgari captura o poder de sedução neste anel Serpenti Viper, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamourosa, esta joia se envolve no dedo, encantando com a beleza preciosa de escamas e com a sinuosidade inconfundível da serpente.",
     ["ouro rosa", "semi-cravejado"],
     ["./Assets/Img/SVA-OR-SC-01.png", "./Assets/Img/SVA-OR-SC-02.png"],
   ],
@@ -123,6 +123,8 @@ const productInfo = [
   ],
 ];
 
+const imgSrc = [];
+const Gallery = [];
 const Cart = [];
 const WhishList = [];
 
@@ -157,10 +159,13 @@ class Product {
 //// Objects
 // All Products
 const Products = {};
+
+/// Filling elements
 let id = 0;
 for (let p of productInfo) {
   Products[`P${id}`] = new Product(id, p[0], p[1], p[2], p[3], p[4], p[5]);
+  imgSrc.push(...p[5]);
   id++;
 }
 
-export { Cart, WhishList, Products };
+export { imgSrc, Gallery, Cart, WhishList, Products };

@@ -1,4 +1,4 @@
-import { Cart, WhishList, Products } from "./support.js";
+import { imgSrc, Gallery, Cart, WhishList, Products } from "./support.js";
 
 //// Global variables
 const typeNav = document.getElementById("type");
@@ -25,24 +25,37 @@ for (let p in Products) {
 
 //// Functions
 
+/// Preload Images
+function preloadImage(url) {
+  let img = new Image();
+  img.src = url;
+}
+
+for (let src of imgSrc) {
+  preloadImage(src);
+}
+
 /// Create Fitlers
-function buildFilter(arr, parent1, parent2, child) {
+function buildFilter(name, fItem, arr, parent1, parent2, child, func) {
   let container = document.createElement(parent2);
+  container.name = name;
   let all = document.createElement(child);
-  all.innerText = "Todas";
+  all.innerText = fItem;
+  all.classList.add("active");
+  all.addEventListener("click", func);
   container.appendChild(all);
   for (let element of arr) {
     let newChild = document.createElement(child);
     newChild.innerText = `${
       element.slice(0, 1).toUpperCase() + element.slice(1)
     }`;
+    newChild.addEventListener("click", func);
     container.appendChild(newChild);
   }
   parent1.appendChild(container);
 }
-
-buildFilter(allTypes.sort(), typeNav, "ul", "li");
-buildFilter(allTags, tagsNav, "ul", "li");
+buildFilter("types", "Todos", allTypes.sort(), typeNav, "ul", "li", setFilters);
+buildFilter("tags", "Todas", allTags, tagsNav, "ul", "li", setFilters);
 
 /// Create product card
 function buildProductCard(obj, parent) {
@@ -99,7 +112,90 @@ function buildProductCard(obj, parent) {
   parent.appendChild(article);
 }
 
-for (let p in Products) {
-  let newP = Products[`${p}`];
-  buildProductCard(newP, display);
+/// Filter
+function setFilters() {
+  const Types = typeNav.childNodes[0].childNodes;
+  const Tags = tagsNav.childNodes[0].childNodes;
+
+  if (this.innerText !== "Todos" && this.innerText !== "Todas") {
+    this.classList.toggle("active");
+    if (this.parentElement.name === "types") {
+      Types[0].classList.remove("active");
+    }
+    if (this.parentElement.name === "tags") {
+      Tags[0].classList.remove("active");
+    }
+  }
+  if (this.innerText === "Todos") {
+    this.classList.toggle("active");
+    Types.forEach((x) => {
+      if (x.innerText !== "Todos") {
+        x.classList.remove("active");
+      }
+    });
+  }
+  if (this.innerText === "Todas") {
+    this.classList.toggle("active");
+    Tags.forEach((x) => {
+      if (x.innerText !== "Todas") {
+        x.classList.remove("active");
+      }
+    });
+  }
+
+  filterProducts();
 }
+
+function filterProducts() {
+  // empty gallery
+  Gallery.splice(0, Gallery.length);
+  // empty display
+  display.innerHTML = "";
+  //variables
+  const Types = typeNav.childNodes[0].childNodes;
+  const Tags = tagsNav.childNodes[0].childNodes;
+  const fTypes = [];
+  const fTags = [];
+
+  // get active filters
+  Types.forEach((x) => {
+    if (x.classList.contains("active")) {
+      fTypes.push(x.innerText.toLowerCase());
+    }
+  });
+  Tags.forEach((x) => {
+    if (x.classList.contains("active")) {
+      fTags.push(x.innerText.toLowerCase());
+    }
+  });
+
+  // check for empty lists or if "display all" is active
+  if (fTypes.length === 0 || fTypes.includes("todos")) {
+    fTypes.push(...allTypes);
+    if (!Types[0].classList.contains("active"))
+      Types[0].classList.toggle("active");
+  }
+  if (fTags.length === 0 || fTags.includes("todas")) {
+    fTags.push(...allTags);
+    if (!Tags[0].classList.contains("active"))
+      Tags[0].classList.toggle("active");
+  }
+
+  // aplly filters
+  for (let product in Products) {
+    let p = Products[`${product}`];
+
+    // filter tags
+    let hasTag = fTags.some((x) => p.tags.includes(x));
+    // filter type
+    if (fTypes.includes(p.type) && hasTag) {
+      Gallery.push(p);
+    }
+  }
+
+  for (let p of Gallery) {
+    buildProductCard(p, display);
+  }
+}
+
+filterProducts();
