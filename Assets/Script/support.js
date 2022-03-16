@@ -126,7 +126,7 @@ const productInfo = [
 const imgSrc = [];
 const Gallery = [];
 const Cart = [];
-const WhishList = [];
+const Wishes = [];
 
 //// Classes
 class Product {
@@ -168,4 +168,4 @@ for (let p of productInfo) {
   id++;
 }
 
-export { imgSrc, Gallery, Cart, WhishList, Products };
+export { imgSrc, Gallery, Cart, Wishes, Products };
