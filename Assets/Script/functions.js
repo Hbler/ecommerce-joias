@@ -5,6 +5,7 @@ const typeNav = document.getElementById("type");
 const tagsNav = document.getElementById("tags");
 const display = document.getElementById("display");
 const cartItems = document.getElementById("cart-items");
+const cartSum = document.getElementById("summary");
 const allTypes = [];
 const allTags = [];
 
@@ -294,6 +295,59 @@ function displayCart() {
       buildCartCard(product, qtty, cartItems);
     }
   }
+  cartSummary();
 }
 
 displayCart();
+
+/// cart summary
+// create summary
+function buildSummary(arr, parent) {
+  // total amout of items
+  const itemAmount = document.createElement("div");
+  const items = document.createElement("p");
+  items.innerText = "Peças:";
+  const amount = document.createElement("p");
+  amount.innerText = `${arr.length}`;
+  itemAmount.appendChild(items);
+  itemAmount.appendChild(amount);
+  // total value of items
+  const totalValue = document.createElement("div");
+  const total = document.createElement("p");
+  total.innerText = "Total:";
+  const value = document.createElement("p");
+  let cost = 0;
+  for (let product of arr) {
+    let p = Products[`${product}`];
+    cost += p.price;
+  }
+  value.innerText = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  }).format(cost);
+  totalValue.appendChild(total);
+  totalValue.appendChild(value);
+  // buy button
+  const button = document.createElement("button");
+  button.innerText = "Comprar";
+  // combine all
+  parent.appendChild(itemAmount);
+  parent.appendChild(totalValue);
+  parent.appendChild(button);
+}
+
+// display summary
+function cartSummary() {
+  // empty summary
+  cartSum.innerHTML = "";
+  // check if cart is empty
+  if (Cart.length === 0) {
+    if (!cartSum.classList.contains("clear")) cartSum.classList.toggle("clear");
+    return;
+  }
+  if (cartSum.classList.contains("clear")) {
+    cartSum.classList.toggle("clear");
+  }
+
+  buildSummary(Cart, cartSum);
+}
