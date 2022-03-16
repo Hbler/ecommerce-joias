@@ -4,10 +4,12 @@ import { imgSrc, Gallery, Cart, WhishList, Products } from "./support.js";
 const typeNav = document.getElementById("type");
 const tagsNav = document.getElementById("tags");
 const display = document.getElementById("display");
+const cartItems = document.getElementById("cart-items");
 const allTypes = [];
 const allTags = [];
 
-/// Conditioning data
+//// Conditioning data
+/// Types and Tags
 for (let p in Products) {
   let type = Products[`${p}`].type;
   let tagsList = Products[`${p}`].tags;
@@ -22,19 +24,16 @@ for (let p in Products) {
     }
   }
 }
-
-//// Functions
-
 /// Preload Images
 function preloadImage(url) {
   let img = new Image();
   img.src = url;
 }
-
 for (let src of imgSrc) {
   preloadImage(src);
 }
 
+//// Display Management
 /// Create Fitlers
 function buildFilter(name, fItem, arr, parent1, parent2, child, func) {
   let container = document.createElement(parent2);
@@ -60,7 +59,11 @@ buildFilter("tags", "Todas", allTags, tagsNav, "ul", "li", setFilters);
 /// Create product card
 function buildProductCard(obj, parent) {
   // card
-  const article = document.createElement("article");
+  const card = document.createElement("article");
+  // obj
+  const self = document.createElement("q");
+  self.style.display = "none";
+  self.innerText = obj.id;
   // images
   const pic = document.createElement("div");
   pic.classList.add("pic");
@@ -101,18 +104,21 @@ function buildProductCard(obj, parent) {
   const cartB = document.createElement("button");
   cartB.classList.add("add-cart");
   cartB.innerText = "Adicionar ao carrinho";
+  cartB.addEventListener("click", addToCart);
   // combine all
-  article.appendChild(pic);
-  article.appendChild(tagCont);
-  article.appendChild(name);
-  article.appendChild(info);
-  article.appendChild(price);
-  article.appendChild(wish);
-  article.appendChild(cartB);
-  parent.appendChild(article);
+  card.appendChild(self);
+  card.appendChild(pic);
+  card.appendChild(tagCont);
+  card.appendChild(name);
+  card.appendChild(info);
+  card.appendChild(price);
+  card.appendChild(wish);
+  card.appendChild(cartB);
+  parent.appendChild(card);
 }
 
 /// Filter
+// Get filters
 function setFilters() {
   const Types = typeNav.childNodes[0].childNodes;
   const Tags = tagsNav.childNodes[0].childNodes;
@@ -145,7 +151,7 @@ function setFilters() {
 
   filterProducts();
 }
-
+// Apply filters
 function filterProducts() {
   // empty gallery
   Gallery.splice(0, Gallery.length);
@@ -199,3 +205,95 @@ function filterProducts() {
 }
 
 filterProducts();
+
+//// Cart Management
+/// Create cart card
+function buildCartCard(obj, qtty, parent) {
+  // card
+  const card = document.createElement("div");
+  card.classList.add("cart-card");
+  // self
+  const self = document.createElement("q");
+  self.style.display = "none";
+  self.innerText = obj.id;
+  // image
+  const imgTag = document.createElement("img");
+  imgTag.src = obj.src[0];
+  imgTag.alt = `${obj.name.toLowerCase()}`;
+  // name + price
+  const namePrice = document.createElement("div");
+  const name = document.createElement("h5");
+  name.innerText = obj.name;
+  const price = document.createElement("p");
+  price.innerText = obj.value;
+  namePrice.appendChild(name);
+  namePrice.appendChild(price);
+  // quantity
+  const amount = document.createElement("div");
+  const txt = document.createElement("p");
+  txt.innerText = "Qtd";
+  const quantity = document.createElement("p");
+  quantity.innerText = `x${qtty}`;
+  amount.appendChild(txt);
+  amount.appendChild(quantity);
+  // remove item button
+  const button = document.createElement("button");
+  const icon = document.createElement("i");
+  icon.classList.add("fa-solid");
+  icon.classList.add("fa-xmark");
+  button.appendChild(icon);
+  button.addEventListener("click", takeFromCart);
+  // combine all
+  card.appendChild(self);
+  card.appendChild(imgTag);
+  card.appendChild(namePrice);
+  card.appendChild(amount);
+  card.appendChild(button);
+  parent.appendChild(card);
+}
+
+/// send to Cart list
+function addToCart() {
+  const product = this.parentElement.childNodes[0].innerText;
+  Cart.push(`P${product}`);
+  displayCart();
+}
+
+/// remove from Cart list
+function takeFromCart() {
+  const product = this.parentElement.childNodes[0].innerText;
+  while (Cart.includes(`P${product}`)) {
+    let index = Cart.indexOf(`P${product}`);
+    Cart.splice(index, 1);
+  }
+  displayCart();
+}
+
+/// display products
+function displayCart() {
+  // clean list
+  cartItems.innerHTML = "";
+  // check if empty
+  if (Cart.length === 0) {
+    const empty = document.createElement("div");
+    empty.classList.add("empty-card");
+    const txt = document.createElement("h5");
+    txt.innerText = "Sua bag está vazia";
+    const txt2 = document.createElement("p");
+    txt2.innerText = "Adicione peças";
+    empty.appendChild(txt);
+    empty.appendChild(txt2);
+    cartItems.appendChild(empty);
+  } else {
+    // limit card quantity
+    const toShow = new Set(Cart);
+    // create card and add to cart list
+    for (const p of toShow) {
+      const product = Products[`${p}`];
+      const qtty = Cart.filter((x) => x === p).length;
+      buildCartCard(product, qtty, cartItems);
+    }
+  }
+}
+
+displayCart();
