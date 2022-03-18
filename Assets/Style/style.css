@@ -808,6 +808,9 @@ aside h2 {
   }
 
   /* Summary */
+  #summary {
+    height: 6vh;
+  }
   #summary div {
     font-size: 12px;
   }
