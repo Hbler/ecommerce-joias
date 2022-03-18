@@ -855,7 +855,7 @@ aside h2 {
   /* Products Container */
   #display {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
