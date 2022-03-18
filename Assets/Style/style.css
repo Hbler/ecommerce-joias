@@ -40,6 +40,8 @@ header li:hover {
   font-weight: 400;
 }
 
+/* Type Filter */
+
 #type {
   width: 70%;
   margin: 1%;
@@ -59,6 +61,8 @@ header li:hover {
   display: flex;
   justify-content: space-between;
 }
+
+/* Tag Filter*/
 
 #tags {
   width: 100%;
@@ -90,6 +94,10 @@ main {
   justify-content: space-between;
 }
 
+#mobile-search {
+  display: none;
+}
+
 #display {
   width: 70%;
   height: 95vh;
@@ -100,6 +108,8 @@ main {
   border-radius: 2px;
   border: 1px solid transparent;
 }
+
+/* Product Cards */
 
 article {
   width: 32%;
@@ -143,13 +153,23 @@ article div {
   justify-content: space-between;
 }
 
+article div:nth-child(3) {
+  justify-content: flex-end;
+}
+
 article small {
-  margin: 1% 0;
+  margin: 1% 2% 3%;
   padding: 2%;
   font-size: 10px;
   color: #686868;
   border-radius: 1px;
-  background-color: #dbdbdb;
+
+  box-shadow: 1px 1px #dbdbdb;
+  transition: 500ms;
+}
+
+article:hover small {
+  background-color: #dbdbdb60;
 }
 
 article h3 {
@@ -163,6 +183,7 @@ article h4 {
   font-size: 20px;
   text-align: right;
   margin: 3% 0;
+  padding: 0 2px;
   opacity: 0;
   transition: 500ms;
 }
@@ -184,13 +205,19 @@ article p {
 }
 
 article .add-cart {
-  width: 80%;
+  width: 63%;
   border: none;
   border-radius: 2px;
-  color: #fff;
+  color: #686868;
   font-family: "Inter", sans-serif;
   font-weight: 200;
   padding: 2% 0;
+  background-color: #dbdbdb;
+  transition: 500ms;
+}
+
+article:hover .add-cart {
+  color: #fff;
   background-color: #000;
 }
 
@@ -202,7 +229,6 @@ article .add-cart:hover {
 
 article .wish {
   width: 20%;
-  padding: 2%;
   border: none;
   color: #000;
   opacity: 0;
@@ -227,6 +253,7 @@ aside {
   border-radius: 2px;
 }
 
+/* Search Bar*/
 form {
   padding: 1% 0;
   display: flex;
@@ -239,7 +266,7 @@ form input {
   color: #686868;
   border: none;
   border-radius: 2px;
-  border-bottom: 2px solid #523f02;
+  border-bottom: 2px solid #d4a40650;
   box-sizing: border-box;
   background-color: #fff;
 }
@@ -249,14 +276,26 @@ form button {
   padding: 2%;
   border: none;
   border-radius: 2px;
-  color: #fff;
-  background-color: #523f02;
+  color: #523f02;
+  background-color: #d4a40650;
+}
+
+form button span {
+  display: none;
+}
+
+form #search-button i {
+  display: none;
+}
+
+form button::before {
+  content: "Pesquisar";
 }
 
 form button:hover {
   color: #fff;
   cursor: pointer;
-  background-color: #000;
+  background-color: #523f02;
 }
 
 aside h2 {
@@ -268,6 +307,7 @@ aside h2 {
   font-family: "Marcellus", serif;
 }
 
+/* Cart */
 #cart {
   margin: 5% 0 10%;
 }
@@ -297,7 +337,7 @@ aside h2 {
 }
 
 .empty-card p {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 200;
   text-align: center;
 }
@@ -311,7 +351,7 @@ aside h2 {
 }
 
 .cart-card img {
-  width: 30%;
+  height: 100%;
 }
 
 .cart-card div {
@@ -350,6 +390,8 @@ aside h2 {
   color: red;
 }
 
+/* Summary */
+
 #summary {
   padding: 3% 0;
   height: 10vh;
@@ -387,6 +429,8 @@ aside h2 {
   font-weight: 400;
 }
 
+/* Wish List */
+
 #wish-list h2 {
   color: #000;
   border: 2px solid transparent;
@@ -409,7 +453,7 @@ aside h2 {
 }
 
 .wish-card img {
-  width: 30%;
+  height: 100%;
 }
 
 .wish-card div {
@@ -460,7 +504,7 @@ aside h2 {
   background-color: #523f02;
 }
 
-/* Control Classes */
+/* VISUAL CONTROL */
 
 .active {
   color: #000;
@@ -469,4 +513,420 @@ aside h2 {
 
 .clear {
   display: none;
+}
+
+/* RESPONSIVE LAYOUTS */
+@media screen and (min-width: 2280px) {
+  /* HEADER */
+
+  header h1 {
+    font-size: 3.5em;
+  }
+
+  header li {
+    font-size: 24px;
+  }
+
+  /* MAIN */
+  /* Product Cards */
+
+  article small {
+    font-size: 18px;
+  }
+
+  article h3 {
+    font-size: 30px;
+  }
+
+  article h4 {
+    font-size: 34px;
+  }
+
+  article p {
+    font-size: 24px;
+  }
+
+  article .add-cart {
+    width: 55%;
+    font-size: 24px;
+  }
+
+  article .wish {
+    font-size: 24px;
+  }
+
+  /* ASIDE */
+  /*Search Bar*/
+  form input {
+    font-size: 20px;
+  }
+
+  form button {
+    font-size: 24px;
+  }
+
+  /* Cart + Whish List */
+  #cart h2,
+  #wish-list h2 {
+    font-size: 30px;
+  }
+
+  .cart-card {
+    height: 15vh;
+  }
+
+  .empty-card h5 {
+    font-size: 28px;
+  }
+
+  .empty-card p {
+    font-size: 24px;
+  }
+
+  .cart-card div h5,
+  .wish-card div h5 {
+    font-size: 24px;
+  }
+
+  .cart-card div p {
+    font-size: 18px;
+  }
+
+  .cart-card button,
+  #wish-list .wish-card button {
+    font-size: 16px;
+  }
+
+  /* Summary + Whish List */
+  #summary div p {
+    font-size: 26px;
+  }
+
+  #summary button,
+  #wish-list button {
+    font-size: 24px;
+    padding: 1% 0;
+  }
+}
+@media screen and (min-width: 860px) and (max-width: 1139px) {
+  /* Header */
+  header li {
+    font-size: 12px;
+    margin: 0.7%;
+  }
+
+  /* MAIN */
+
+  article div {
+    margin: 3% 0 0;
+  }
+
+  article small {
+    font-size: 9px;
+  }
+
+  article h3 {
+    font-size: 16px;
+  }
+
+  article p {
+    height: 5.2vh;
+    font-size: 12px;
+  }
+
+  article h4 {
+    margin: 5% 0 0;
+    font-size: 16px;
+  }
+
+  article .add-cart {
+    width: 70%;
+    font-size: 12px;
+  }
+
+  /* ASIDE */
+  /* Form */
+  form button {
+    font-size: 11px;
+  }
+
+  /* Cart */
+
+  #cart {
+    margin: 5% 0 15%;
+  }
+
+  .cart-card div h5 {
+    font-size: 11px;
+  }
+
+  .cart-card div p {
+    font-size: 11px;
+  }
+}
+/* @media screen and (min-width: 580px) and (max-width: 859px) { */
+@media screen and (max-width: 859px) {
+  /* HEADER */
+  header {
+    width: 100%;
+    padding-top: 2%;
+    align-items: center;
+    position: fixed;
+    top: 0;
+  }
+
+  /* Filters */
+  #type,
+  #tags {
+    width: 100%;
+    padding: 0 1%;
+    display: block;
+    justify-content: center;
+  }
+
+  #type ul,
+  #tags ul {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  /* MAIN */
+  main {
+    width: 90vw;
+    padding-top: 30vh;
+  }
+
+  #display {
+    height: fit-content;
+    width: 65%;
+  }
+
+  /* Product Cards */
+  article {
+    width: 48%;
+  }
+
+  article h4 {
+    opacity: 1;
+  }
+
+  article p {
+    font-size: 11px;
+  }
+
+  article .add-cart {
+    font-size: 11px;
+  }
+
+  article .wish {
+    opacity: 1;
+  }
+
+  /* ASIDE */
+
+  aside {
+    width: 33%;
+    height: 70vh;
+    position: fixed;
+    left: 65%;
+    overflow: scroll;
+  }
+
+  /* Form  */
+  form button {
+    width: 20%;
+    padding: 5% 3%;
+  }
+
+  form #search-button i {
+    display: inline;
+  }
+
+  form button::before {
+    content: "";
+  }
+
+  /* Cart + Wish List*/
+  #cart h2,
+  #wish-list h2 {
+    font-size: 13px;
+  }
+
+  #cart-items {
+    height: 24vh;
+  }
+
+  .cart-card {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .cart-card div {
+    width: 40%;
+  }
+
+  .cart-card div:nth-child(4) {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .cart-card div:nth-child(4) p {
+    margin: 0 5% 0 0;
+  }
+
+  .cart-card div h5 {
+    width: 100%;
+    font-size: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    direction: rtl;
+    text-overflow: ellipsis;
+  }
+
+  .wish-card div h5 {
+    font-size: 12px;
+  }
+
+  .cart-card p {
+    font-size: 10px;
+  }
+
+  .cart-card button,
+  #wish-list .wish-card button {
+    width: 10%;
+    height: 100%;
+    opacity: 1;
+  }
+
+  /* Summary */
+  #summary div {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 579px) {
+  /* HEADER */
+  /* Filters */
+  #tags ul {
+    display: none;
+  }
+
+  /* MAIN */
+  main {
+    width: 97vw;
+    padding-top: 20vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Mobile Search Bar */
+  #mobile-search {
+    width: 80vw;
+    height: 5vh;
+    margin: 0 auto 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #mobile-search div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+  }
+
+  #mobile-search button {
+    padding: 1%;
+  }
+
+  #mobile-search small {
+    color: #88888899;
+  }
+
+  /* Products Container */
+  #display {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 75vh;
+  }
+
+  /* Product Cards */
+  article {
+    width: 75%;
+    margin: 0 1% 2%;
+  }
+
+  /* Aside */
+
+  aside {
+    width: 90%;
+    margin: auto;
+    height: fit-content;
+    position: static;
+  }
+
+  /* Search Bar */
+  aside form {
+    display: none;
+  }
+
+  /* Cart +  Wish List */
+  #cart {
+    margin: 5% 0 13%;
+  }
+
+  #cart h2,
+  #wish-list h2 {
+    font-size: 18px;
+  }
+
+  #cart-items {
+    height: 25vh;
+  }
+
+  .cart-card {
+    width: 100%;
+    height: 10vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+  }
+
+  .cart-card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: fit-content;
+  }
+
+  .cart-card div:nth-child(4) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cart-card div h5,
+  .wish-card div h5 {
+    font-size: 16px;
+  }
+
+  .cart-card div p {
+    text-align: right;
+    font-weight: 200;
+    font-size: 12px;
+  }
+
+  .cart-card button {
+    width: 8%;
+    border: none;
+    transition: 500ms;
+    background-color: transparent;
+  }
+
+  /* Summary */
+  #summary div {
+    font-size: 16px;
+  }
 }

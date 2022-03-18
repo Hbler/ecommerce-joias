@@ -42,7 +42,7 @@ function buildWish(obj, parent) {
 
 /// send to Whishes
 function addWish() {
-  const product = this.parentElement.childNodes[0].innerText;
+  const product = this.parentElement.parentElement.childNodes[0].innerText;
   if (!Wishes.includes(`P${product}`)) Wishes.push(`P${product}`);
   showWishes();
 }

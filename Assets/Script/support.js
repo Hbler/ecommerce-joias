@@ -1,5 +1,5 @@
 //// Lists
-// Source: https://www.bulgari.com/pt-br/joias/por-cole%C3%A7%C3%A3o/serpenti?sz=48
+// Source: https://www.Bwlgari.com/pt-br/joias/por-cole%C3%A7%C3%A3o/serpenti?sz=48
 const productInfo = [
   [
     "Serpenti Viper Colar",
@@ -45,7 +45,7 @@ const productInfo = [
     "Serpenti Viper Pulseira",
     194000,
     "pulseira",
-    "Em um tributo a seu espírito animal, a Bulgari captura o poder de sedução nesta pulseira Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamorosa, esta joia se envolve no pulso, encantando com a beleza preciosa de escamas e com a sinuosidade inconfundível da serpente. Pulseira Serpenti slim em ouro branco 18K completamente cravejada com diamantes.",
+    "Em um tributo a seu espírito animal, a Bwlgari captura o poder de sedução nesta pulseira Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamorosa, esta joia se envolve no pulso, encantando com a beleza preciosa de escamas e com a sinuosidade inconfundível da serpente. Pulseira Serpenti slim em ouro branco 18K completamente cravejada com diamantes.",
     ["ouro branco", "cravejado"],
     ["./Assets/Img/SVP-OB-C-01.png", "./Assets/Img/SVP-OB-C-02.png"],
   ],
@@ -69,7 +69,7 @@ const productInfo = [
     "Serpenti Pulseira",
     269000,
     "pulseira",
-    "Fundindo dois dos mais icônicos símbolos do design Bulgari, a pulseira Serpenti une a sinuosidade da serpente com a contemporaneidade do tubogas. Evocando tanto as curvas sensuais de uma mulher quanto a forma fluida da serpente, a pulseira é produzida com as linhas atraentes da técnica tubogas, com uma maleabilidade flexível e tubular. Irradiando glamour e um estilo verdadeiramente individual, esta joia Serpenti é magnética e natural. Pulseira Serpenti Tubogas em ouro rosa 18K com diamantes cravejados.",
+    "Fundindo dois dos mais icônicos símbolos do design Bwlgari, a pulseira Serpenti une a sinuosidade da serpente com a contemporaneidade do tubogas. Evocando tanto as curvas sensuais de uma mulher quanto a forma fluida da serpente, a pulseira é produzida com as linhas atraentes da técnica tubogas, com uma maleabilidade flexível e tubular. Irradiando glamour e um estilo verdadeiramente individual, esta joia Serpenti é magnética e natural. Pulseira Serpenti Tubogas em ouro rosa 18K com diamantes cravejados.",
     ["ouro rosa", "semi-cravejado"],
     ["./Assets/Img/SP-OR-SC-01.png", "./Assets/Img/SP-OR-SC-02.png"],
   ],
@@ -117,7 +117,7 @@ const productInfo = [
     "Serpenti Viper Anel",
     9850,
     "anel",
-    "Em um tributo a seu espírito animal, a Bulgari captura o poder de sedução nesta aliança de casamento Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamorosa, esta joia se envolve no dedo, encantando com a beleza preciosa de escamas e com a sinuosidade inconfundível da serpente. Aliança de casamento Serpenti em ouro branco 18K.",
+    "Em um tributo a seu espírito animal, a Bwlgari captura o poder de sedução nesta aliança de casamento Serpenti, camuflando sensualidade e tentação com um design hipnótico. Sofisticada e glamorosa, esta joia se envolve no dedo, encantando com a beleza preciosa de escamas e com a sinuosidade inconfundível da serpente. Aliança de casamento Serpenti em ouro branco 18K.",
     ["ouro branco", "sem pedras"],
     ["./Assets/Img/SVA-OB-SP-01.png", "./Assets/Img/SVA-OB-SP-02.png"],
   ],

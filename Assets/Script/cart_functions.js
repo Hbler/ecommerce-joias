@@ -53,7 +53,8 @@ function buildCartCard(obj, qtty, parent) {
 
 /// send to Cart list
 function addToCart() {
-  const product = this.parentElement.childNodes[0].innerText;
+  const product = this.parentElement.parentElement.childNodes[0].innerText;
+  console.log(product);
   Cart.push(`P${product}`);
   displayCart();
 }
@@ -79,7 +80,7 @@ function displayCart() {
     const txt = document.createElement("h5");
     txt.innerText = "Sua bag está vazia";
     const txt2 = document.createElement("p");
-    txt2.innerText = "Adicione peças";
+    txt2.innerText = "adicione peças";
     empty.appendChild(txt);
     empty.appendChild(txt2);
     cartItems.appendChild(empty);

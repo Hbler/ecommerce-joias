@@ -100,6 +100,10 @@ function buildProductCard(obj, parent) {
   cartB.classList.add("add-cart");
   cartB.innerText = "Adicionar ao carrinho";
   cartB.addEventListener("click", addToCart);
+  // arrange buttons
+  const bDiv = document.createElement("div");
+  bDiv.appendChild(wish);
+  bDiv.appendChild(cartB);
   // combine all
   card.appendChild(self);
   card.appendChild(pic);
@@ -107,8 +111,7 @@ function buildProductCard(obj, parent) {
   card.appendChild(name);
   card.appendChild(info);
   card.appendChild(price);
-  card.appendChild(wish);
-  card.appendChild(cartB);
+  card.appendChild(bDiv);
   parent.appendChild(card);
 }
 
