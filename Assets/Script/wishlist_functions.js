@@ -1,10 +1,12 @@
 //// Imports
-import { Wishes, Products } from "./support.js";
+import { Cart, Wishes, Products } from "./support.js";
 import { filterProducts } from "./layout_functions.js";
+import { displayCart } from "./cart_functions.js";
 
 //// Global Variables
 const wishlist = document.getElementById("wish-list");
 const wishItems = document.getElementById("wish-items");
+const wishButton = document.getElementById("wish-button");
 
 //// Wishlist Management
 /// create whish card
@@ -79,4 +81,15 @@ function showWishes() {
   filterProducts(display);
 }
 
-export { buildWish, addWish, cancelWish, showWishes };
+/// send to Cart
+function wishesToCart() {
+  // add wishes to cart
+  Cart.push(...Wishes);
+  // clear wishes
+  Wishes.splice(0, Wishes.length);
+  showWishes();
+  // refresh cart
+  displayCart();
+}
+
+export { wishButton, buildWish, addWish, cancelWish, showWishes, wishesToCart };

@@ -8,7 +8,7 @@ import {
   filterProducts,
 } from "./layout_functions.js";
 import { displayCart } from "./cart_functions.js";
-import { showWishes } from "./wishlist_functions.js";
+import { wishButton, showWishes, wishesToCart } from "./wishlist_functions.js";
 import {
   sMobile,
   bMobile,
@@ -32,6 +32,7 @@ for (let src of imgSrc) {
 }
 
 //// Listeners
+/// Search
 document.addEventListener("keydown", (e) => {
   const keyName = e.key;
   if (keyName === "Enter") {
@@ -49,10 +50,11 @@ document.addEventListener("keydown", (e) => {
 bMobile.addEventListener("click", () => {
   newSearch(sMobile);
 });
-
 sButton.addEventListener("click", () => {
   newSearch(sBar);
 });
+/// Wish
+wishButton.addEventListener("click", wishesToCart);
 
 //// Display Management
 /// Create Filters
