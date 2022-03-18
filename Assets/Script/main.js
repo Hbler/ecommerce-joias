@@ -36,9 +36,14 @@ document.addEventListener("keydown", (e) => {
   const keyName = e.key;
   if (keyName === "Enter") {
     e.preventDefault();
-    const where = e.path[0].id;
-    if (where === "mobile-search-bar") newSearch(sMobile);
-    else newSearch(sBar);
+    const path = e.path || (e.composedPath && e.composedPath());
+    if (path) {
+      const where = path[0].id;
+      if (where === "mobile-search-bar") newSearch(sMobile);
+      else newSearch(sBar);
+    } else {
+      return;
+    }
   }
 });
 bMobile.addEventListener("click", () => {
