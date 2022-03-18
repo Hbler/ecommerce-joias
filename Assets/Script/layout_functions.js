@@ -43,7 +43,9 @@ function buildFilter(name, fItem, arr, parent1, parent2, child, func) {
     newChild.innerText = `${
       element.slice(0, 1).toUpperCase() + element.slice(1)
     }`;
-    newChild.addEventListener("click", func);
+    newChild.addEventListener("click", (e) => {
+      func(e.target);
+    });
     container.appendChild(newChild);
   }
   parent1.appendChild(container);
@@ -117,29 +119,29 @@ function buildProductCard(obj, parent) {
 
 /// Filter
 // Get filters
-function setFilters() {
+function setFilters(element) {
   const Types = typeNav.childNodes[0].childNodes;
   const Tags = tagsNav.childNodes[0].childNodes;
 
-  if (this.innerText !== "Todos" && this.innerText !== "Todas") {
-    this.classList.toggle("active");
-    if (this.parentElement.name === "types") {
+  if (element.innerText !== "Todos" && element.innerText !== "Todas") {
+    element.classList.toggle("active");
+    if (element.parentElement.name === "types") {
       Types[0].classList.remove("active");
     }
-    if (this.parentElement.name === "tags") {
+    if (element.parentElement.name === "tags") {
       Tags[0].classList.remove("active");
     }
   }
-  if (this.innerText === "Todos") {
-    this.classList.toggle("active");
+  if (element.innerText === "Todos") {
+    element.classList.toggle("active");
     Types.forEach((x) => {
       if (x.innerText !== "Todos") {
         x.classList.remove("active");
       }
     });
   }
-  if (this.innerText === "Todas") {
-    this.classList.toggle("active");
+  if (element.innerText === "Todas") {
+    element.classList.toggle("active");
     Tags.forEach((x) => {
       if (x.innerText !== "Todas") {
         x.classList.remove("active");
@@ -202,4 +204,11 @@ function filterProducts(parent) {
   }
 }
 
-export { buildFilter, buildProductCard, setFilters, filterProducts };
+export {
+  allTypes,
+  allTags,
+  buildFilter,
+  buildProductCard,
+  setFilters,
+  filterProducts,
+};

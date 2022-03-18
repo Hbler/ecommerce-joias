@@ -1,16 +1,25 @@
 //// Imports
-import { imgSrc, Products } from "./support.js";
-import { buildFilter, setFilters, filterProducts } from "./layout_functions.js";
-import { showWishes } from "./wishlist_functions.js";
-
+import { imgSrc } from "./support.js";
+import {
+  allTypes,
+  allTags,
+  buildFilter,
+  setFilters,
+  filterProducts,
+} from "./layout_functions.js";
 import { displayCart } from "./cart_functions.js";
-
+import { showWishes } from "./wishlist_functions.js";
+import {
+  sMobile,
+  bMobile,
+  sBar,
+  sButton,
+  newSearch,
+} from "./search_functions.js";
 //// Global Variables
 const typeNav = document.getElementById("type");
 const tagsNav = document.getElementById("tags");
 const display = document.getElementById("display");
-const allTypes = [];
-const allTags = [];
 
 //// Data conditioning
 /// Preload Images
@@ -21,21 +30,24 @@ function preloadImage(url) {
 for (let src of imgSrc) {
   preloadImage(src);
 }
-/// Types and Tags
-for (let p in Products) {
-  let type = Products[`${p}`].type;
-  let tagsList = Products[`${p}`].tags;
 
-  if (!allTypes.includes(type)) {
-    allTypes.push(type);
+//// Listeners
+document.addEventListener("keydown", (e) => {
+  const keyName = e.key;
+  if (keyName === "Enter") {
+    e.preventDefault();
+    const where = e.path[0].id;
+    if (where === "mobile-search-bar") newSearch(sMobile);
+    else newSearch(sBar);
   }
+});
+bMobile.addEventListener("click", () => {
+  newSearch(sMobile);
+});
 
-  for (let tag of tagsList) {
-    if (!allTags.includes(tag)) {
-      allTags.push(tag);
-    }
-  }
-}
+sButton.addEventListener("click", () => {
+  newSearch(sBar);
+});
 
 //// Display Management
 /// Create Filters

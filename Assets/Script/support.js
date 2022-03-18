@@ -127,6 +127,7 @@ const imgSrc = [];
 const Gallery = [];
 const Cart = [];
 const Wishes = [];
+const Search = [];
 
 //// Classes
 class Product {
@@ -168,4 +169,4 @@ for (let p of productInfo) {
   id++;
 }
 
-export { imgSrc, Gallery, Cart, Wishes, Products };
+export { imgSrc, Gallery, Cart, Wishes, Search, Products };
