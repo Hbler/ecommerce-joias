@@ -939,6 +939,10 @@ aside h2 {
   }
 
   /* Summary */
+  #summary {
+    height: 10vh;
+  }
+
   #summary div {
     font-size: 16px;
   }
