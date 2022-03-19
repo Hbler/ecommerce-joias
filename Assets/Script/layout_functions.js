@@ -124,10 +124,18 @@ function setFilters() {
   if (this.innerText !== "Todos" && this.innerText !== "Todas") {
     this.classList.toggle("active");
     if (this.parentElement.name === "types") {
-      Types[0].classList.remove("active");
+      Types.forEach((x) => {
+        if (x.innerText !== this.innerText) {
+          x.classList.remove("active");
+        }
+      });
     }
     if (this.parentElement.name === "tags") {
-      Tags[0].classList.remove("active");
+      Tags.forEach((x) => {
+        if (x.innerText !== this.innerText) {
+          x.classList.remove("active");
+        }
+      });
     }
   }
   if (this.innerText === "Todos") {
