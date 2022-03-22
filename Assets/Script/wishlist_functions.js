@@ -51,7 +51,9 @@ function addWish() {
 
 /// remove from Whishes
 function cancelWish() {
-  const product = this.parentElement.parentElement.childNodes[0].innerText;
+  const product =
+    this.parentElement.childNodes[0].innerText ||
+    this.parentElement.parentElement.childNodes[0].innerText;
   let index = Wishes.indexOf(`P${product}`);
   Wishes.splice(index, 1);
   showWishes();
