@@ -1,7 +1,7 @@
 //// Imports
 import { Wishes } from "./support.js";
 import { Products, Gallery } from "./support.js";
-import { addWish } from "./wishlist_functions.js";
+import { addWish, cancelWish } from "./wishlist_functions.js";
 import { addToCart } from "./cart_functions.js";
 
 //// Global Variables
@@ -90,11 +90,16 @@ function buildProductCard(obj, parent) {
   const wish = document.createElement("button");
   wish.classList.add("wish");
   const icon = document.createElement("i");
-  if (Wishes.includes(`P${obj.id}`)) icon.classList.add("fa-solid");
-  else icon.classList.add("fa-regular");
+  if (Wishes.includes(`P${obj.id}`)) {
+    icon.classList.add("fa-solid");
+    wish.addEventListener("click", cancelWish);
+  } else {
+    icon.classList.add("fa-regular");
+    wish.addEventListener("click", addWish);
+  }
   icon.classList.add("fa-heart");
   wish.appendChild(icon);
-  wish.addEventListener("click", addWish);
+
   // add to cart
   const cartB = document.createElement("button");
   cartB.classList.add("add-cart");
