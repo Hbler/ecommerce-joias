@@ -135,28 +135,24 @@ article img {
 article .pic img:nth-child(1) {
   opacity: 1;
   visibility: visible;
-  /* display: block; */
 }
 
 article .pic img:nth-child(2) {
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  /* display: none; */
 }
 
 article .pic:hover img:nth-child(1) {
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  /* display: none; */
 }
 
 article .pic:hover img:nth-child(2) {
   opacity: 1;
   visibility: visible;
   position: relative;
-  /* display: block; */
 }
 
 article div {
