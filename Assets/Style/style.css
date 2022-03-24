@@ -129,22 +129,34 @@ article img {
   width: 100%;
   border-radius: 2px;
   background-color: #f8f8f8;
+  transition: opacity 1s;
 }
 
 article .pic img:nth-child(1) {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  /* display: block; */
 }
 
 article .pic img:nth-child(2) {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  /* display: none; */
 }
 
 article .pic:hover img:nth-child(1) {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  /* display: none; */
 }
 
 article .pic:hover img:nth-child(2) {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  /* display: block; */
 }
 
 article div {
